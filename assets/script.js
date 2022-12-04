@@ -30,3 +30,6 @@ var questions = [
         answer: "false"
     },
 ];
+
+var score = 0;
+var questionsIndex = 0;
