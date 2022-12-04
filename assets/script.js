@@ -33,3 +33,14 @@ var questions = [
 
 var score = 0;
 var questionsIndex = 0;
+var cursor = 0;
+
+
+
+
+// Still needs work:
+// Questions to to appear and function
+// Timer to function
+// Score to tally
+// Timer to remove time for wrong answers
+// Scoreboard
