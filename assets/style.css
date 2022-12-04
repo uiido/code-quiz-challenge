@@ -1,6 +1,6 @@
-h2 {
+p {
     font-size: 16px;
-    margin-top: -8px;
+    margin-top: -14px;
 }
 
 #important-info {
@@ -18,4 +18,8 @@ h2 {
 #time {
     display: flex;
     align-items: center;
+}
+
+#quiz {
+    margin-top: -20px;
 }

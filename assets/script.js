@@ -57,11 +57,13 @@ var advance = function (event) {
             cursor++;
             quizEl.dataset.index = cursor;
         }
-        displayQuestion();
+        displayQuiz();
     }
 };
 
+document.addEventListener('click', advance);
 
+displayQuiz();
 
 
 
