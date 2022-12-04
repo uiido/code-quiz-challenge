@@ -36,11 +36,12 @@ var questions = [
 
 var displayQuiz = function () {
     quizEl.querySelector('h3').textContent = questions[cursor].text;
+    quizEl.querySelector('#choices').innherHTML = null;
     for (var buttonLabel of questions[cursor].possible)
         var buttonEl = document.createElement('button');
     buttonEl.textContent = buttonLabel;
     buttonEl.dataset.choice = buttonLabel[0];
-    quizEl.appendChild(buttonEl);
+    questionEl.querySelector('#choices').appendChild(buttonEl);
 };
 
 var score = 0;
