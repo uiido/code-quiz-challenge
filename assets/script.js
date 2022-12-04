@@ -36,10 +36,15 @@ var questions = [
 
 var displayQuiz = function () {
     quizEl.querySelector('h3').textContent = questions[cursor].text;
+    for (var buttonLabel of questions[cursor].possible)
+        var buttonEl = document.createElement('button');
+    buttonEl.textContent = buttonLabel;
+    quizEl.appendChild(buttonEl);
 };
 
 var score = 0;
 var questionsIndex = 0;
+
 
 
 
