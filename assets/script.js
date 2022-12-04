@@ -1,3 +1,6 @@
+var quiz = document.querySelector(".quiz");
+var cursor = 0;
+
 var questions = [
     {
         question: "You can write CSS and/or Javscript in HTML files:",
@@ -33,7 +36,6 @@ var questions = [
 
 var score = 0;
 var questionsIndex = 0;
-var cursor = 0;
 
 
 
