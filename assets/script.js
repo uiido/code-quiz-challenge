@@ -1,4 +1,4 @@
-var quiz = document.querySelector(".quiz");
+var quizEl = document.querySelector(".quiz");
 var cursor = 0;
 
 var questions = [
@@ -33,6 +33,10 @@ var questions = [
         answer: "false"
     },
 ];
+
+var displayQuiz = function () {
+    quizEl.querySelector('h3').textContent = questions[cursor].text;
+};
 
 var score = 0;
 var questionsIndex = 0;
