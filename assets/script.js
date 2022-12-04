@@ -39,11 +39,27 @@ var displayQuiz = function () {
     for (var buttonLabel of questions[cursor].possible)
         var buttonEl = document.createElement('button');
     buttonEl.textContent = buttonLabel;
+    buttonEl.dataset.choice = buttonLabel[0];
     quizEl.appendChild(buttonEl);
 };
 
 var score = 0;
 var questionsIndex = 0;
+
+var advance = function (event) {
+    var element = event.target;
+    if (element.matches('question button')) {
+        var answer = element.dataset.choice === correctAnswer[cursor];
+        console.log(element.dataset.choice);
+        console.log(correctAnswers[cursor]);
+        console.log(answer);
+        if (cursor < questions.length - 1) {
+            cursor++;
+            quizEl.dataset.index = cursor;
+        }
+        displayQuestion();
+    }
+};
 
 
 
