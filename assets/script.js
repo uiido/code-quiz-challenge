@@ -1,6 +1,6 @@
 // Query selectors
-var startQuiz = document.querySelector("#start");
-var timeLeft = document.querySelector("#count-down");
+var startQuizEl = document.getElementById("#start");
+var timeLeftEl = document.getElementById("#count-down");
 
 // Questions, options, answers for quiz
 var questions = [
@@ -37,8 +37,15 @@ var questions = [
 ];
 
 // Variables
+var secondsLeft = 60;
+
+
+
+
+
+
 
 
 
 // Event listener for the start button
-startBtn.addEventListener("click", INPUTHERE);
+// startBtn.addEventListener("click", INPUTHERE);
