@@ -39,7 +39,7 @@ var advance = function (event) {
         console.log(correctAnswers[quizCursor++]);
         console.log(answer);
         if (quizCursor < quizQuestions.length - 1) {
-            quizCursor++;
+            // quizCursor++;
         }
         displayQuestion();
     }
