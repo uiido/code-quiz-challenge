@@ -15,6 +15,10 @@ var timerEl = document.querySelector('#timer');
 var timeRemaining = quizQuestions.length * 15;
 
 
+// Score is added to with correct answers and displayed at the end of the quiz to submit
+var score = 0;
+
+
 
 
 // Displays questions on quiz
@@ -54,4 +58,4 @@ displayQuestion();
 
 
 // Event listener for the start button
-startBtn.addEventListener("click", INPUTHERE);
+// startBtn.addEventListener("click", INPUTHERE);
