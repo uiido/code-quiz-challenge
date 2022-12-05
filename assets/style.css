@@ -16,10 +16,6 @@ p {
     align-items: center;
 }
 
-#score {
-    display: flex;
-}
-
 #time {
     display: flex;
 }
@@ -37,9 +33,23 @@ p {
 button {
     display: inline-block;
     margin: 5px;
-    ;
 }
 
 #start {
     font-size: 36px;
+}
+
+#scores-list {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 6px;
+    margin-top: 30px;
+}
+
+#return-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 6px;
 }

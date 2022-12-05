@@ -14,6 +14,27 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 var timerEl = document.querySelector('#timer');
 var timeRemaining = quizQuestions.length * 15;
 
+function displayTimer() {
+    timerEl.textContent = "Time Remaining: " + timeRemaining;
+}
+
+function countdown() {
+    displayTimer(timeRemaining);
+    var timerInterval = setInterval(function () {
+        timeRemaining--;
+        displayTimer(timeRemaining);
+
+        if (timeRemaining === 0) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            displayMessage();
+            timerEl.textContent = "";
+        }
+
+    }, 1000);
+}
+
 
 // Score is added to with correct answers and displayed at the end of the quiz to submit
 var score = 0;
@@ -53,6 +74,8 @@ document.addEventListener('click', advance);
 
 displayQuestion();
 
+
+// Local storage to store high scores
 
 
 
