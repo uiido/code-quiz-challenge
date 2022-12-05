@@ -6,6 +6,10 @@ var questions = document.querySelectorAll('.question');
 var quizIndex = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
+// Score tracking
+
+
+
 // Timer starts when start button is selected, count down is shown
 
 
@@ -49,4 +53,4 @@ displayQuestion();
 
 
 // Event listener for the start button
-// startBtn.addEventListener("click", INPUTHERE);
+startBtn.addEventListener("click", INPUTHERE);
