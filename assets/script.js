@@ -1,3 +1,7 @@
+// Query selector for start button
+var startQuiz = document.querySelector("#start");
+
+// Questions, options, answers for quiz
 var questions = [
     {
         question: "You can write CSS and/or Javscript in HTML files:",
@@ -30,3 +34,9 @@ var questions = [
         answer: "false"
     },
 ];
+
+
+
+
+// Event listener for the start button
+startBtn.addEventListener("click", INPUTHERE);
