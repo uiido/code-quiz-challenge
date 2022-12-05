@@ -1,12 +1,10 @@
 // Query selectors
 var quizStart = document.querySelector('#start');
-var quizQuestions = document.querySelectorAll('.question');
+var questions = document.querySelectorAll('.question');
 
 // Variables
-var quizCursor = 0;
+var quizIndex = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
-
-
 
 // Timer starts when start button is selected, count down is shown
 
@@ -15,10 +13,10 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
 
 // Displays questions on quiz
-var displayQuiz = function () {
-    for (var question of quizQuestions) {
+var displayQuestion = function () {
+    for (var question of questions) {
         console.log(question);
-        if (question.dataset.index != quizCursor) {
+        if (question.dataset.index != quizIndex) {
             question.style.display = "none";
         } else {
             question.style.display = "block";
@@ -33,18 +31,18 @@ var advance = function (event) {
     if (element.matches('.question button')) {
         var answer = element.dataset.choice === correctAnswers[quizIndex];
         console.log(element.dataset.choice);
-        console.log(correctAnswers[quizCursor++]);
+        console.log(correctAnswers[quizIndex++]);
         console.log(answer);
-        if (quizCursor < quizQuestions.length - 1) {
-            quizCursor++;
+        if (quizIndex < questions.length - 1) {
+            quizIndex++;
         }
-        displayQuiz();
+        displayQuestion();
     }
 };
 
 document.addEventListener('click', advance);
 
-displayQuiz();
+displayQuestion();
 
 
 
