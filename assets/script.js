@@ -1,4 +1,5 @@
 // Query selectors
+var quizStart = document.querySelector('#start');
 var quizEl = document.querySelector('#quiz');
 var quizIndex = 0;
 
@@ -35,9 +36,13 @@ var questions = [
         answer: "false"
     },
 ];
+
 var correctAnswers = ["true", "<span>", "the text color", "false", "{}", "false"];
 
 // Variables
+
+
+// Timer starts when start button is selected, count down is shown
 
 
 
@@ -46,20 +51,23 @@ var correctAnswers = ["true", "<span>", "the text color", "false", "{}", "false"
 // Displays questions on quiz
 var displayQuestion = function () {
     quizEl.textContent = questions[quizIndex];
-    for (var buttonLabel of questions[quizIndex].choices) {
-        var buttonEl = document.createElement('button');
-        buttonEl.textContent = buttonLabel;
-        questionEl.appendChild('buttonEl');
-    }
 };
 
 
 // moves the quiz forward
-var advance = function () {
+var advance = function (event) {
+    var element = event.target;
+    if (element.matches()) {
+        var answers = element.dataset.choice === correctAnswers[quizIndex];
+        console.log(element.dataset.choice);
+        console.log(correctAnswers[quizIndex]);
+        console.log(answers);
+    }
     if (quizIndex < questions.length - 1) {
         quizIndex++;
-        displayQuestion();
+        quizEl.dataset.index = quizIndex;
     }
+    displayQuestion();
 };
 
 quizEl.addEventListener('click', advance);
