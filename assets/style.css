@@ -20,9 +20,16 @@ p {
     display: flex;
 }
 
-#quiz-options {
+.question {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+button {
+    display: flex;
+    margin: 5px;
+    ;
 }
 
 #start {

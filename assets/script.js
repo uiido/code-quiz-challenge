@@ -1,6 +1,6 @@
 // Query selectors
 var quizStart = document.querySelector('#start');
-var quizEl = document.querySelector('#quiz');
+var questions = document.querySelectorAll('.questions');
 var quizIndex = 0;
 
 // Questions, options, answers for quiz
@@ -54,23 +54,31 @@ var quizIndex = 0;
 
 // Displays questions on quiz
 var displayQuestion = function () {
-    quizEl.textContent = questions[quizIndex];
+    for (var question of questions) {
+        console.log(question);
+        if (question.dataset.index != quizIndex) {
+            question.style.display = "none";
+        } else {
+            question.style.display = "block";
+        }
+    }
 };
 
 
 // moves the quiz forward
 var advance = function (event) {
     var element = event.target;
-    if (quizIndex < questions.length - 1) {
-        quizIndex++;
-        quizEl.dataset.index = quizIndex;
+    if (element.matches('question button')) {
+        if (quizIndex < questions.length - 1) {
+            quizIndex++;
+        }
+        displayQuestion();
     }
-    // displayQuestion();
 };
 
-quizEl.addEventListener('click', advance);
+document.addEventListener('click', advance);
 
-// displayQuestion();
+displayQuestion();
 
 
 
