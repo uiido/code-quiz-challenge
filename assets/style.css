@@ -16,8 +16,16 @@ p {
     align-items: center;
 }
 
+#score {
+    display: flex;
+}
+
 #time {
     display: flex;
+}
+
+#start {
+    margin: 20px;
 }
 
 .question {

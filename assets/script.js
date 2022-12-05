@@ -11,19 +11,19 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
 
 // Timer starts when start button is selected, count down is shown
-
+var timeRemaining = quizQuestions.length * 15;
 
 
 
 
 // Displays questions on quiz
 var displayQuestion = function () {
-    for (var question of quizQuestions) {
-        console.log(question);
-        if (question.dataset.index != quizCursor) {
-            question.style.display = "none";
+    for (var indQuestion of quizQuestions) {
+        console.log(indQuestion);
+        if (indQuestion.dataset.index != quizCursor) {
+            indQuestion.style.display = "none";
         } else {
-            question.style.display = "block";
+            indQuestion.style.display = "block";
         }
     }
 };
