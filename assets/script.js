@@ -11,6 +11,7 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
 
 // Timer starts when start button is selected, count down is shown
+var timerEl = document.querySelector('#timer');
 var timeRemaining = quizQuestions.length * 15;
 
 
