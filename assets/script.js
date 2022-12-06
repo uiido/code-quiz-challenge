@@ -26,7 +26,7 @@ function setCountdown() {
 
         if (timeRemaining === 0) {
             clearInterval(timeInterval);
-            timerEl.textContent = "Game's Ended!";
+            timerEl.textContent = "Game Ended!";
         }
     }, 1000);
 }
@@ -37,7 +37,7 @@ setCountdown();
 // Score never displays as anything other than 75, even though I want it to match time when the quiz ends; 
 // I don't know how to identify wrong answers to attach a penalty to them
 var scoreEl = document.querySelector('#total-score');
-var score = timeRemaining--;
+var score = timeRemaining;
 var penalty = 10;
 scoreEl.innerHTML = score;
 
@@ -59,6 +59,15 @@ var displayQuestion = function () {
         }
     }
 };
+
+// var displayEndScreen = function () {
+//     for (var endScreenEl) {
+//         //
+//         // if (quizcursor >= 7) {
+//         //     endScreenEl.style.display = "none";
+//         // }
+//     }
+// }
 
 
 // moves the quiz forward
@@ -127,3 +136,5 @@ function renderInitials() {
 // Create end screen function
 // Link questions/timer end to end screen function
 // Add event listener to local storage for high scores & initials
+// Adjust timer and score so score will equal timer text value
+// Adjust values to save for local storage
