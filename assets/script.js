@@ -34,7 +34,8 @@ setCountdown();
 
 // Score variables
 var scoreEl = document.querySelector('#total-score');
-var score = 0;
+var score = timeRemaining;
+scoreEl.innerHTML = score;
 var penalty = 10;
 
 // Score functions
@@ -78,4 +79,8 @@ document.addEventListener('click', advance);
 displayQuestion();
 
 
-// Local storage to store high scores
+// Skip to end screen when out of time
+// Keep score
+// Penalty
+// Local storage
+// Submit score
