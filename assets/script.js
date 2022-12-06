@@ -1,6 +1,7 @@
 // Query selectors
 var quizStart = document.querySelector('#start');
 var quizQuestions = document.querySelectorAll('.question');
+var endQuiz = document.querySelector('#results');
 
 // Variables
 var quizCursor = 0;
@@ -8,7 +9,7 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
 // Timer starts when start button is selected, count down is shown
 var timerEl = document.querySelector('#timer');
-var timeRemaining = quizQuestions.length * 15;
+var timeRemaining = quizQuestions.length * 10;
 
 // displays text for timer
 function displayTimer() {
@@ -64,10 +65,10 @@ var advance = function (event) {
             // quizCursor++;
         }
         displayQuestion();
+    } else {
+        // end screen
     }
 };
-
-//create end screen
 
 document.addEventListener('click', advance);
 
