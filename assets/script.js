@@ -31,9 +31,12 @@ function setCountdown() {
 
 setCountdown();
 
-// Score is added to with correct answers and displayed at the end of the quiz to submit
+// Score variables
+var scoreEl = document.querySelector('#total-score');
 var score = 0;
 var penalty = 10;
+
+// Score functions
 
 
 // Displays questions on quiz

@@ -44,6 +44,17 @@ button {
     font-size: 36px;
 }
 
+h3 {
+    font-size: 48px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+#submit-info {
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
 #final-score {
     display: inline-block;
     margin-right: 60px;
@@ -56,6 +67,14 @@ button {
 
 #results {
     text-align: center;
+}
+
+#total-score {
+    font-weight: bold;
+}
+
+#initials {
+    width: 100px;
 }
 
 #scores-list {
