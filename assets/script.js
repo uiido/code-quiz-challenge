@@ -14,34 +14,27 @@ var score = 0;
 var timerEl = document.querySelector('#timer');
 var timeRemaining = quizQuestions.length * 15;
 
+// displays text for timer
 function displayTimer() {
     timerEl.textContent = "Time Remaining: " + timeRemaining;
 }
 
-function countdown() {
+// timer function
+function setCountdown() {
     displayTimer(timeRemaining);
-    var timerInterval = setInterval(function () {
+    var timeInterval = setInterval(function () {
         timeRemaining--;
         displayTimer(timeRemaining);
 
         if (timeRemaining === 0) {
-            // Stops execution of action at set interval
-            clearInterval(timerInterval);
-            // Calls function to create and append image
+            clearInterval(timeInterval);
             displayMessage();
-            timerEl.textContent = "";
+            timerEl.textContent = "Time's up!";
         }
-
     }, 1000);
 }
 
-// Starts the quiz questions, timer, and score
-var startQuiz = function () {
-    // start timer
-    // start score
-    advance();
-}
-
+setCountdown();
 
 
 // Displays questions on quiz
