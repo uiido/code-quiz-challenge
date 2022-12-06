@@ -6,6 +6,7 @@ var endQuiz = document.querySelector('#results');
 // Variables
 var quizCursor = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
+var highScores = [];
 
 // Timer starts when start button is selected, count down is shown
 var timerEl = document.querySelector('#timer');
@@ -86,20 +87,20 @@ displayQuestion();
 // I don't think these variables are grabbing anything - as they never display any user submitted data
 var initialsInput = document.getElementById("initials");
 
-var initials = {
-    initials: initialsInput.value.trim()
+var highScore = {
+    initials: initialsInput.value.trim(),
+    score: score
 }
 
 
 // I don't think this works for initials. Score seems fine but user input never appears with initials
-localStorage.setItem("score", score);
-localStorage.setItem("initials", JSON.stringify(initials));
+localStorage.setItem("highScore", JSON.stringify(highScore));
 
 // I don't think this is working correclty? It doesn't seem to grab any user input
 function renderInitials() {
-    var highScoreInitials = JSON.parse(localstorage.getItem("initials"));
-    if (highScoreInitials !== null) {
-        document.querySelector(".user-score").textContent = highScoreInitials + " | " + score
+    var highScoreOutput = JSON.parse(localstorage.getItem("highScore"));
+    if (highScoreOutput !== null) {
+        document.querySelector(".user-score").textContent = highScoreOutput
     }
 }
 

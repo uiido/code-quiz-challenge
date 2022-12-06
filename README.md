@@ -1,8 +1,8 @@
 # Code Quiz Challenge
 
-[Link to my project]()
+[Link to my project](https://github.com/uiido/code-quiz-challenge)
 
-[Link to my project page]()
+[Link to my project page](https://uiido.github.io/code-quiz-challenge/)
 
 ## Table of Contents
 - [Description](#description)
@@ -14,4 +14,4 @@ This is a short quiz challenge of coding questions. Users will hit a start butto
 
 ## Visuals
 
-![Website Sample](assets/images/full-screenshot.png)
+![Website Sample](/assets/screenshot_.png))
