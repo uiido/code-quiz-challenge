@@ -66,7 +66,10 @@ var advance = function (event) {
         }
         displayQuestion();
     } else {
-        // end screen
+        if (timeRemaining === 0) {
+            quizCursor === 6;
+        }
+        displayQuestion(6);
     }
 };
 
