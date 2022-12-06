@@ -6,10 +6,6 @@ var quizQuestions = document.querySelectorAll('.question');
 var quizCursor = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
-
-// Score is added to with correct answers and displayed at the end of the quiz to submit
-var score = 0;
-
 // Timer starts when start button is selected, count down is shown
 var timerEl = document.querySelector('#timer');
 var timeRemaining = quizQuestions.length * 15;
@@ -28,13 +24,16 @@ function setCountdown() {
 
         if (timeRemaining === 0) {
             clearInterval(timeInterval);
-            displayMessage();
             timerEl.textContent = "Time's up!";
         }
     }, 1000);
 }
 
 setCountdown();
+
+// Score is added to with correct answers and displayed at the end of the quiz to submit
+var score = 0;
+var penalty = 10;
 
 
 // Displays questions on quiz

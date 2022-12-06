@@ -52,6 +52,30 @@ button {
     margin-top: 30px;
 }
 
+#scores-list ul {
+    width: 100%;
+    list-style-position: inside;
+    margin-left: -15px;
+}
+
+#scores-list li {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    color: #212121;
+    list-style-type: none;
+}
+
+#scores-list li:nth-child(odd) {
+    background: #ffb131;
+}
+
+#scores-list li:nth-child(even) {
+    background: #fff845;
+}
+
 #return-home {
     display: flex;
     flex-wrap: wrap;
