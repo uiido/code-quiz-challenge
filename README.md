@@ -14,4 +14,4 @@ This is a short quiz challenge of coding questions. Users will hit a start butto
 
 ## Visuals
 
-![Website Sample](/assets/screenshot_.png))
+![Website Sample](/assets/screenshot_.png)
