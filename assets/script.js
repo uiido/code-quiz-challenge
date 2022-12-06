@@ -40,6 +40,13 @@ function countdown() {
 var score = 0;
 
 
+var startQuiz = function () {
+    // remove start button
+    startBtn.setAttribute("class", "hide");
+    displayQuestion();
+    countdown();
+}
+
 
 
 // Displays questions on quiz
@@ -81,4 +88,4 @@ displayQuestion();
 
 
 // Event listener for the start button
-// startBtn.addEventListener("click", INPUTHERE);
+startBtn.addEventListener("click", startQuiz);
