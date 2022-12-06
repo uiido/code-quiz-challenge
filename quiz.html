@@ -23,61 +23,84 @@
         <span id="timer"></span>
     </article>
 
-    <article class="question" data-index="0">
-        <!-- Quiz questions -->
-        <h2 id="quiz">You can write CSS and/or Javscript in HTML files:</h2>
-        <button data-choice="a">true</button>
-        <button data-choice="b">false</button>
-    </article>
-    <article class="question" data-index="1">
-        <!-- Quiz questions -->
-        <h2 id="quiz">HTML semmantic code doesn't include:</h2>
-        <button data-choice="a">p</button>
-        <button data-choice="b">aside</button>
-        <button data-choice="c">span</button>
-        <button data-choice="d">footer</button>
-    </article>
-    <article class="question" data-index="2">
-        <!-- Quiz questions -->
-        <h2 id="quiz">The style 'color' in CSS refers to the color of:</h2>
-        <button data-choice="a">border color</button>
-        <button data-choice="b">text color</button>
-        <button data-choice="c">background color</button>
-        <button data-choice="d">text decoration color</button>
-    </article>
-    <article class="question" data-index="3">
-        <!-- Quiz questions -->
-        <h2 id="quiz">Media Queries only work on widths below 1000px:</h2>
-        <button data-choice="a">true</button>
-        <button data-choice="b">false</button>
-    </article>
-    <article class="question" data-index="4">
-        <!-- Quiz questions -->
-        <h2 id="quiz">What should enclose conditions in an if / else statement:</h2>
-        <button data-choice="a">[]</button>
-        <button data-choice="b">()</button>
-        <button data-choice="c">{}</button>
-        <button data-choice="d">nothing</button>
-    </article>
-    <article class="question" data-index="5">
-        <!-- Quiz questions -->
-        <h2 id="quiz">In JavaScript, a boolean can be a number:</h2>
-        <button data-choice="a">true</button>
-        <button data-choice="b">false</button>
-    </article>
+    <main id="quiz-body">
+        <div id="all-questions"></div>
+        <section id="quiz-screen">
+            <article class="question" data-index="0">
+                <!-- Quiz questions -->
+                <h2 id="quiz">You can write CSS and/or Javscript in HTML files:</h2>
+                <div class="button-container">
+                    <button data-choice="a">true</button>
+                    <button data-choice="b">false</button>
+                </div>
+            </article>
+            <article class="question" data-index="1">
+                <!-- Quiz questions -->
+                <h2 id="quiz">HTML semmantic code doesn't include:</h2>
+                <div class="button-container">
+                    <button data-choice="a">p</button>
+                    <button data-choice="b">aside</button>
+                    <button data-choice="c">span</button>
+                    <button data-choice="d">footer</button>
+                </div>
+            </article>
+            <article class="question" data-index="2">
+                <!-- Quiz questions -->
+                <h2 id="quiz">The style 'color' in CSS refers to the color of:</h2>
+                <div class="button-container">
+                    <button data-choice="a">border color</button>
+                    <button data-choice="b">text color</button>
+                    <button data-choice="c">background color</button>
+                    <button data-choice="d">text decoration color</button>
+                </div>
+            </article>
+            <article class="question" data-index="3">
+                <!-- Quiz questions -->
+                <h2 id="quiz">Media Queries only work on widths below 1000px:</h2>
+                <div class="button-container">
+                    <button data-choice="a">true</button>
+                    <button data-choice="b">false</button>
+                </div>
+            </article>
+            <article class="question" data-index="4">
+                <!-- Quiz questions -->
+                <h2 id="quiz">What should enclose conditions in an if / else statement:</h2>
+                <div class="button-container">
+                    <button data-choice="a">[]</button>
+                    <button data-choice="b">()</button>
+                    <button data-choice="c">{}</button>
+                    <button data-choice="d">nothing</button>
+                </div>
+            </article>
+            <article class="question" data-index="5">
+                <!-- Quiz questions -->
+                <h2 id="quiz">In JavaScript, a boolean can be a number:</h2>
+                <div class="button-container">
+                    <button data-choice="a">true</button>
+                    <button data-choice="b">false</button>
+                </div>
+            </article>
+            </div>
+        </section>
 
 
-    <!-- I have this set as a question to progress more naturally through the quiz, but I know it can't be right.
+        <!-- I have this set as a question to progress more naturally through the quiz, but I know it can't be right.
     How can I properly fix this? -->
-    <article class="question" id="results" data-index="6">
-        <h3 id="game-over">Game ended!</h3>
-        <div id="submit-info">
-            <span id="final-score">Your final score is <div id="total-score">#</div></span>
-            <span id="submit-initials"><label for="initials-area">Enter your initials:</label><input type="text"
-                    name="initials-area" id="initials">
-                <a href="./highscores.html"><button id="submit-button" type="submit">Submit!</button></a></span>
-        </div>
-    </article>
+        <section id="end-screen">
+            <article id="results" data-index="6">
+                <h3 id="game-over">Game ended!</h3>
+                <div id="submit-info">
+                    <span id="final-score">
+                        <p>Your final score is </p>
+                        <div id="total-score">#</div>
+                    </span>
+                    <span id="submit-initials"><label for="initials-area">Enter your initials:</label><input type="text"
+                            name="initials-area" id="initials">
+                        <a href="./highscores.html"><button id="submit-button" type="submit">Submit!</button></a></span>
+                </div>
+            </article>
+        </section>
+    </main>
 
     <script src="./assets/script.js"></script>
 

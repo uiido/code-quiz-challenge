@@ -3,7 +3,7 @@ var quizStart = document.querySelector('#start');
 var quizQuestions = document.querySelectorAll('.question');
 var endQuiz = document.querySelector('#results');
 
-// Variables
+// Quiz Variables
 var quizCursor = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 var highScores = [];
@@ -42,6 +42,12 @@ var penalty = 10;
 scoreEl.innerHTML = score;
 
 
+// Quiz
+var allQuestionsEl = document.querySelector('#all-questions');
+var endScreenEl = document.querySelector('#end-screen');
+
+
+
 // Displays questions on quiz
 var displayQuestion = function () {
     for (var indQuestion of quizQuestions) {
@@ -68,7 +74,10 @@ var advance = function (event) {
         }
         displayQuestion();
     } else {
+        console.log("Incorrect");
+        console.log("Subtract time");
     }
+    displayQuestion();
 };
 
 
@@ -79,7 +88,9 @@ var advance = function (event) {
 // How do I use the stopped timer value for the score??
 
 
+
 document.addEventListener('click', advance);
+
 
 displayQuestion();
 
@@ -110,3 +121,9 @@ function renderInitials() {
 // How do you track incorrect answers to add a penalty?
 // Local storage displays the user's initials as "initials", "undefined", or "[ojbect]" in the console log, not any user input
 // Local storage doesn't display on the highscores board
+
+
+// TO DO
+// Create end screen function
+// Link questions/timer end to end screen function
+// Add event listener to local storage for high scores & initials
