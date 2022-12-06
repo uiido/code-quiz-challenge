@@ -37,7 +37,9 @@ function countdown() {
 
 // Starts the quiz questions, timer, and score
 var startQuiz = function () {
-    quizStart.setAttribute("class", "hide");
+    // start timer
+    // start score
+    advance();
 }
 
 
@@ -78,9 +80,3 @@ displayQuestion();
 
 
 // Local storage to store high scores
-
-
-
-
-// Event listener for the start button
-startBtn.addEventListener("click", startQuiz);

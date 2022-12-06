@@ -36,6 +36,11 @@ button {
 }
 
 #start {
+    display: flex;
+    justify-content: center;
+}
+
+#start input {
     font-size: 36px;
 }
 
