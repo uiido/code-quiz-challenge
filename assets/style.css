@@ -44,6 +44,20 @@ button {
     font-size: 36px;
 }
 
+#final-score {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+#submit-initials {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+#results {
+    text-align: center;
+}
+
 #scores-list {
     display: flex;
     /* justify-content: space-between; */
@@ -73,7 +87,7 @@ button {
 }
 
 #scores-list li:nth-child(even) {
-    background: #fff845;
+    background: #fff845
 }
 
 #return-home {
