@@ -6,9 +6,9 @@ var quizQuestions = document.querySelectorAll('.question');
 var quizCursor = 0;
 var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
-// Score tracking
 
-
+// Score is added to with correct answers and displayed at the end of the quiz to submit
+var score = 0;
 
 // Timer starts when start button is selected, count down is shown
 var timerEl = document.querySelector('#timer');
@@ -35,16 +35,9 @@ function countdown() {
     }, 1000);
 }
 
-
-// Score is added to with correct answers and displayed at the end of the quiz to submit
-var score = 0;
-
-
+// Starts the quiz questions, timer, and score
 var startQuiz = function () {
-    // remove start button
-    startBtn.setAttribute("class", "hide");
-    displayQuestion();
-    countdown();
+    quizStart.setAttribute("class", "hide");
 }
 
 
@@ -76,6 +69,8 @@ var advance = function (event) {
         displayQuestion();
     }
 };
+
+//create end screen
 
 document.addEventListener('click', advance);
 
