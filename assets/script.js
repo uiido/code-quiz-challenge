@@ -61,12 +61,14 @@ var displayQuestion = function () {
 };
 
 // var displayEndScreen = function () {
-//     for (var endScreenEl) {
-//         //
-//         // if (quizcursor >= 7) {
-//         //     endScreenEl.style.display = "none";
-//         // }
-//     }
+//     console.log("Display end screen");
+// var highScore = {
+//     score: timeRemaining,
+//     initials: initials.value.trim(),
+// }
+// var highScoresList = JSON.parse(localStorage.getItem("highscores")) || [];
+// highScoresList.push(highScore);
+// localStorage.setItem("highScores")
 // }
 
 
