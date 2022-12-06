@@ -9,7 +9,7 @@ var correctAnswers = ["a", "c", "b", "b", "c", "b"];
 
 // Timer starts when start button is selected, count down is shown
 var timerEl = document.querySelector('#timer');
-var timeRemaining = quizQuestions.length * 10;
+var timeRemaining = 75;
 
 // displays text for timer
 function displayTimer() {
@@ -35,10 +35,8 @@ setCountdown();
 // Score variables
 var scoreEl = document.querySelector('#total-score');
 var score = timeRemaining;
-scoreEl.innerHTML = score;
 var penalty = 10;
-
-// Score functions
+scoreEl.innerHTML = score;
 
 
 // Displays questions on quiz
@@ -67,16 +65,23 @@ var advance = function (event) {
         }
         displayQuestion();
     } else {
-        if (timeRemaining === 0) {
-            quizCursor === 6;
-        }
-        displayQuestion(6);
     }
 };
 
 document.addEventListener('click', advance);
 
 displayQuestion();
+
+// // local storage
+var initialsInput = document.getElementById("initials");
+
+var initials = {
+    initials: initialsInput.value
+}
+
+localStorage.setItem("score", score);
+localStorage.setItem("initials", initials);
+
 
 
 // Skip to end screen when out of time
